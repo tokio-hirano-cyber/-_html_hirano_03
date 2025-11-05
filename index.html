@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheese ACADEMY TOKYO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#111827',
+                            accent: '#ef4444',
+                            muted: '#6b7280'
+                        }
+                    },
+                    boxShadow: {
+                        card: '0 8px 24px rgba(0,0,0,.08)'
+                    }
+                }
+            }
+        }
+    </script>
+
+
+</head>
+
+<body class="font-sans text-brand bg-white ">
+    <!-- ・サイト全体幅 1200pxで作成する ※レスポンシブレアウトができる方は 100％幅で作成しても構いません -->
+    <div class="wrap mx-auto max-w-[1200px]"></div>
+    <!-- ・ヘッダーを作成 <header class="header"> //この中に書く </header> -->
+    <header class="header sticky top-0 z-40 bg-black">
+        <h1 class="text-yellow-400 text-3xl px-3">
+            <li class="font-semibold text-brand.accent tracking-wide">CHEESE ACADEMY</li>
+            <li class="block text-brand.accent/80 -mt-1 text-sm tracking-widest px-40">TOKYO JAPAN</li>
+            <li class="border-t border-yellow-400"> </li>
+
+        </h1>
+        <!-- NAVI -->
+        <nav class="hidden md:flex items-center gap-8 text-yellow-400 px-3">
+            <a href="#about" class="font-semibold text-brand.accent hover:opacity-80">ABOUT</a>
+            <a href="#advantages" class="font-semibold text-brand.accent hover:opacity-80">ADVANTAGES</a>
+            <a href="#news" class="font-semibold text-brand.accent hover:opacity-80">NEWS</a>
+            <a href="#access" class="font-semibold text-brand.accent hover:opacity-80">ACCESS</a>
+            <a href="#contact" class="font-semibold text-brand.accent hover:opacity-80">CONTACT</a>
+        </nav>
+
+        <div class="mainvisual">
+            <section class="relative">
+
+                <!-- 表題 -->
+                <!-- グラデーションbg-gradient-to-r from-purple-400/60 to-purple-700/60 -->
+                <div class="w-full aspect-[21/9] overflow-hidden">
+                    <img src="img/cheese1.jpg" alt="SEO対策" class="h-full w-full object-cover fade-in" />
+                </div>
+                <div class="absolute inset-0 bg-black/20"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="text-center text-white px-4">
+                        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide mb-3">セカイを変えるチーズを作ろう</h1>
+                        <p
+                            class="text-sm sm:text-base bg-gradient-to-r from-purple-400/60 to-purple-700/60 inline-block px-3 py-1 rounded">
+                            チーズ職人養成学校「チーズアカデミーTOKYO」
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ABOUT -->
+        <section id="about" class="px-4 sm:px-6 py-16 sm:py-20">
+            <header class="text-center">
+                <h2
+                    class="text-4xl font-bold tracking-widest text-white bg-gradient-to-r from-green-200/60 via-green-300/60 to-green-200/60">
+                    ABOUT
+                </h2>
+                <p class="border-t py-5 text-white .muted mt-2">チーズアカデミーについて</p>
+                <p
+                    class="text-2xl font-semibold bg-gradient-to-r from-yellow-100 to-yellow-500 bg-clip-text text-transparent">
+                    ①チーズの基礎知識から、酪農体験、加工・熟成、販売・起業までを実践的に学びます。</p>
+                <p
+                    class="text-2xl font-semibold bg-gradient-to-r from-green-500 to-green-100 bg-clip-text text-transparent">
+                    ②初心者の方でも大丈夫。現場経験が豊富な講師が丁寧にサポートします。</p>
+                <p
+                    class="text-2xl font-semibold bg-gradient-to-r from-yellow-100 to-yellow-500 bg-clip-text text-transparent">
+                    ③本格的に職人を目指す方から、食の仕事に活かしたい方まで、多様な目的に合わせたカリキュラムを用意。</p>
+                <p
+                    class="text-2xl font-semibold bg-gradient-to-r from-green-500 to-green-100 bg-clip-text text-transparent">
+                    ④卒業後の就職・独立に向けたキャリア支援も充実しています。</p>
+                </div>
+
+                <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <img class="w-full h-48 object-cover rounded-lg shadow-card fade-in" src="img/about_01.jpg"
+                        alt="SEO対策" />
+                    <img class="w-full h-48 object-cover rounded-lg shadow-card fade-in" src="img/about_02.jpeg"
+                        alt="SEO対策" />
+                    <img class="w-full h-48 object-cover rounded-lg shadow-card fade-in" src="img/about_03.jpg"
+                        alt="SEO対策" />
+                </div>
+        </section>
+
+        <!-- ADVANTAGES -->
+        <section id="advantages" class="bg-black text-white py-16 sm:py-20">
+            <div class="px-4 sm:px-6">
+                <header class="text-center">
+                    <h2
+                        class="text-4xl font-bold tracking-widest text-white bg-gradient-to-r from-green-200/60 via-green-300/60 to-green-200/60">
+                        チーズアカデミーの特徴</h2>
+                    <p class="border-t py-5 text-brand.muted mt-2 text-2xl">本格的なチーズづくりを学べる、3つの柱</p>
+                </header>
+                <!-- iframe に直接 width/height を指定しない,aspect-video クラスを使う（16:9 比率）,iframe 自体には w-full h-full を指定 -->
+                <!-- チーズアカデミーの特徴1 -->
+                <div class="text-white mt-10 grid md:grid-cols-2 gap-8 items-center">
+                    <div class="aspect-video w-full">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/8o-LeidcO_0?rel=0"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl text-green-500 font-semibold">本格的な酪農体験を通った基礎研修</h3>
+                        <p class="border-t text-3xl leading-relaxed">
+                            実際の牧場での飼育・搾乳・衛生管理を学ぶほか、チーズの原料となるミルクの品質や季節変化について理解を深めます。
+                            未経験者でも安全に学べるよう、少人数制で指導します。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- チーズアカデミーの特徴2 -->
+                <div class="text-white mt-2 grid md:grid-cols-2 gap-8 items-center">
+                    <div class="order-2 md:order-1">
+                        <h3 class="text-2xl text-green-500 font-semibold">必要な知識もしっかり習得</h3>
+                        <p class="border-t text-3xl leading-relaxed">
+                            発酵・熟成のメカニズム、衛生・法規、販売・原価計算など、職人に求められる座学も網羅。
+                            ケーススタディを通じて、現場での意思決定に強くなります。
+                        </p>
+                    </div>
+                    <div class="aspect-video w-full order-1 md:order-2">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/iBmYgihU3NI?rel=0"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- チーズアカデミーの特徴3 -->
+                <div class="text-white mt-2 grid md:grid-cols-2 gap-8 items-center">
+                    <div class="aspect-video w-full">
+                        <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/lrhrL1JsQqg?rel=0"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl text-green-500 font-semibold">卒業制作はテイスティング審査あり</h3>
+                        <p class="border-t text-3xl mt-3 leading-relaxed">
+                            学んだ技術を集約した卒業制作を実施。プロの職人・販売バイヤーによるテイスティング審査とフィードバックで、即戦力としての視点を養います。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWS -->
+        <section id="news" class="px-4 sm:px-6 py-16 sm:py-20">
+            <header class="text-center">
+                <h2
+                    class="text-4xl font-bold tracking-widest text-white bg-gradient-to-r from-pink-200/60 via-pink-300/60 to-pink-200/60">
+                    NEWS</h2>
+                <p class="text-sm text-white .muted mt-2">お知らせ</p>
+            </header>
+
+            <div class="text-white grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 1 -->
+                <article
+                    class="rounded-xl border border-gray-200 overflow-hidden shadow-card hover:shadow-lg transition">
+                    <img class="h-40 w-full object-cover" src="img/news_01.avif" alt="SEO対策" />
+                    <div class="p-5 flex-1 flex flex-col">
+                        <time class="text-xs text-brand.muted">2025/11/04</time>
+                        <h3 class="mt-2 font-semibold">『Cheese Pizza』が渋谷にオープンしました！</h3>
+                        <p class="text-white mt-2 text-sm text-brand line-clamp-3">
+                            チーズアカデミー監修のコラボメニューが登場。チーズの食べ比べイベントも開催しました。</p>
+
+                    </div>
+                </article>
+
+                <!-- 2 -->
+                <article
+                    class="rounded-xl border border-gray-200 overflow-hidden shadow-card hover:shadow-lg transition">
+                    <img class="h-40 w-full object-cover" src="img/news_02.avif" alt="SEO対策" />
+                    <div class="p-5 flex-1 flex flex-col">
+                        <time class="text-xs text-brand.muted">2025/11/04</time>
+                        <h3 class="mt-2 font-semibold">卒業生のショップが新宿にオープン！</h3>
+                        <p class="text-white mt-2 text-sm text-brand line-clamp-3">
+                            卒業生インタビューを公開。開業準備からメニュー作り、販促までのリアルを紹介します。</p>
+
+                    </div>
+                </article>
+
+                <!-- 3 -->
+                <article
+                    class="rounded-xl border border-gray-200 overflow-hidden shadow-card hover:shadow-lg transition">
+                    <img class="h-40 w-full object-cover" src="img/news_03.avif" alt="SEO対策" />
+                    <div class="p-5 flex-1 flex flex-col">
+                        <time class="text-xs text-brand.muted">2025/11/04</time>
+                        <h3 class="mt-2 font-semibold">イベントレポートを公開しました</h3>
+                        <p class="text-white mt-2 text-sm text-brand line-clamp-3">ワークショップや試食会の様子を写真でご紹介。次回イベントもお楽しみに！
+                        </p>
+
+                    </div>
+                </article>
+            </div>
+
+            <!-- moreボタン -->
+
+            <div class="text-center mt-8">
+                <a href="#"
+                    class="inline-block rounded-full border border-gray-300 px-6 py-2 text-sm text-white hover:bg-gray-50">More</a>
+            </div>
+        </section>
+
+        <!-- Access -->
+
+        <section id="access" class="text-white py-16 sm:py-20">
+            <div class="px-4 sm:px-6">
+                <header class="text-center">
+                    <h2
+                        class="text-4xl text-white font-bold tracking-widest bg-gradient-to-r from-pink-200/60 via-pink-300/60 to-pink-200/60">
+                        ACCESS</h2>
+                    <p class="text-sm text-brand.muted mt-2">所在地</p>
+                </header>
+
+                <!-- Map -->
+                <div class="mt-10 rounded-xl overflow-hidden shadow-card border border-gray-200">
+                    <!-- 仕様通り：iframe埋め込み -->
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6482.622954999865!2d139.7004166127801!3d35.66933177247686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9fa9e2e881%3A0x35396adb5ba7ce03!2zRydz77yI44K444O844K677yJ5p2x5Lqs!5e0!3m2!1sja!2sjp!4v1762317218686!5m2!1sja!2sjp"
+                        class="w-full h-[420px]" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <!-- 3カラム情報（Flex/Grid） -->
+                <div class="mt-6 grid sm:grid-cols-3 gap-4 text-2xl text-black">
+                    <div
+                        class="bg-gradient-to-r from-pink-200/60 via-pink-300/60 to-pink-200/60 rounded-xl border border-gray-200 p-4">
+                        <div class="text-brand.muted ">学校名</div>
+                        <div class="font-medium">チーズアカデミーTOKYO</div>
+                    </div>
+                    <div
+                        class="bg-gradient-to-r from-pink-200/60 via-pink-300/60 to-pink-200/60 rounded-xl border border-gray-200 p-4">
+                        <div class="text-brand.muted">TEL</div>
+                        <div class="font-medium">080-8888-0000</div>
+                    </div>
+                    <div
+                        class="bg-gradient-to-r from-pink-200/60 via-pink-300/60 to-pink-200/60 rounded-xl border border-gray-200 p-4">
+                        <div class="text-brand.muted">MAIL</div>
+                        <div class="font-medium">info@cheeseacademy.tokyo</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- contact -->
+        <section id="contact" class="text-white sm:px-6 py-16 sm:py-20 max-w-3xl mx-auto">
+            <header class="text-center">
+                <h2 class="text-2xl font-bold tracking-widest">CONTACT</h2>
+                <p class="text-sm text-brand.muted mt-2">試食・Cheese Pizza予約・お問い合わせ</p>
+            </header>
+
+            <!-- フォーム（アクセシビリティを意識） -->
+            <form class="text-white grid gap-5" action="#" method="post">
+                <div>
+                    <label for="name" class="block text-sm font-medium">お名前</label>
+                    <input id="name" name="name" type="text" required
+                        class="mt-2 w-full rounded-xl border border-gray-300 px-3 py-2 focus:border-brand.accent focus:ring-2 focus:ring-brand.accent/30"
+                        placeholder="平野チーズ" />
+                </div>
+                <div>
+                    <label for="kana" class="block text-sm font-medium">カナ</label>
+                    <input id="kana" name="kana" type="text"
+                        class="mt-2 w-full rounded-xl border border-gray-300 px-3 py-2 focus:border-brand.accent focus:ring-2 focus:ring-brand.accent/30"
+                        placeholder="ヒラノ チーズ" />
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium">メールアドレス</label>
+                    <input id="email" name="email" type="email" required
+                        class="mt-2 w-full rounded-xl border border-gray-300 px-3 py-2 focus:border-brand.accent focus:ring-2 focus:ring-brand.accent/30"
+                        placeholder="cheese@example.com" />
+                </div>
+
+                <div>
+                    <label for="plan" class="block text-sm font-medium">ご希望コース(飲み放題付)</label>
+                    <select id="plan" name="plan"
+                        class="text-black w-full rounded-xl border border-gray-300 px-3 py-2 bg-white focus:border-brand.accent focus:ring-2 focus:ring-brand.accent/30">
+                        <option>未選択</option>
+                        <option>食べ放題、飲み放題付 20,000円</option>
+                        <option>食べ放題 10,000円</option>
+                        <option>飲み放題 10,000円</option>
+                    </select>
+                </div>
+
+                <fieldset class="grid gap-2">
+                    <legend class="text-sm font-medium">資料送付希望</legend>
+                    <label class="inline-flex items-center gap-2 text-sm">
+                        <input type="checkbox" class="rounded border-gray-300 text-brand.accent focus:ring-brand.accent"
+                            name="send[]" value="post" /> 郵送を希望
+                    </label>
+                    <label class="inline-flex items-center gap-2 text-sm">
+                        <input type="checkbox" class="rounded border-gray-300 text-brand.accent focus:ring-brand.accent"
+                            name="send[]" value="email" /> メール送付を希望
+                    </label>
+                    <label class="inline-flex items-center gap-2 text-sm">
+                        <input type="checkbox" class="rounded border-gray-300 text-brand.accent focus:ring-brand.accent"
+                            name="send[]" value="none" /> 送付不要
+                    </label>
+                </fieldset>
+
+                <div>
+                    <label for="message" class="block text-sm font-medium">お問い合わせ内容</label>
+                    <textarea id="message" name="message" rows="5"
+                        class="mt-2 w-full rounded-xl border border-gray-300 px-3 py-2 focus:border-brand.accent focus:ring-2 focus:ring-brand.accent/30"
+                        placeholder="ご質問やご要望などをご記入ください"></textarea>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit"
+                        class="inline-flex items-center justify-center rounded-full bg-brand.accent px-8 py-3 text-white font-semibold hover:opacity-90 active:opacity-100 transition">
+                        送信
+                    </button>
+                </div>
+            </form>
+        </section>
+        </div>
+
+
+        <!-- footer -->
+        <footer class="footer border-t border-white py-10 text-center text-white text-brand.muted">
+            <div class="px-4 sm:px-6">
+                <p>copyright© 2016 Cheese Academy Tokyo All Rights Reserved.</p>
+            </div>
+        </footer>
+
+        </div>
+
+
+        <!-- ・横並び方法 基本は「フレックスボックス」を使用する 調べる際は「フレックスボックス」と検索する -->
+        <!-- ・マップ部分 地図の埋め込みは「iframe（アイフレーム）」 と検索してみると良い -->
+        <!-- ・フォーム部分 苦手な方はこの部分がもっとも大変かもしれません！ 必ずググることをお忘れなく！ -->
+        <!-- ・画像ファイルの読み込み方 <img src="img/○○.jpg" alt=""> -->
+        <!-- ・サイト構成のポイント まず外側を全体で包むことが基本になっています！ なので↓のようなイメージで作成していきます -->
+        <!-- ・<footer class="footer"> //この中に書く </footer> -->
+
+
+
+
+
+
+</body>
+
+</html>
